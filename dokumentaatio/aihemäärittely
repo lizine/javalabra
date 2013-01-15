@@ -1,0 +1,13 @@
+Aihe: Yatzy
+Tehdään yatzypeli. Pelissä on viisi noppaa joita käyttäjä heittää aina 3x per kierros.
+Ensimmäisellä kerralla heitetään kaikkia noppia, sitten lukitaan käyttäjän haluamat nopat ja toistetaan tätä niin että 3 kierrosta on täynnä.
+
+Tämän jälkeen käyttäjä saa sijoittaa noppien silmäluvut haluamaansa kohtaan pistetaulukkoon.
+
+Käyttäjät: Pelaaja
+
+Toiminnot:
+Noppien pyöräyttäminen
+Lukittavien noppien valitseminen (voi jättää myös valitsematta)
+Pisteiden lisäys taulukkoon.
+Pelin lopettaminen on mahdollista myös kesken pelin.
