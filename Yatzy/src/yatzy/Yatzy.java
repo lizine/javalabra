@@ -12,19 +12,21 @@ import java.util.*;
 public class Yatzy {
 
   private Map<String, Integer> tulostaulu = new HashMap<String, Integer>();
-  // luodaan yksi ilmentymä Nopasta, samalla nopalla voidaan generoida silmäluku kaikille viidelle 
-  //käyttäjälle näkyvälle "nopalle". Nimitetään niitä selkeyden vuoksi nimillä silmäluku(1-5);
+  private Noppa noppa1;
+  private Noppa noppa2;
+  private Noppa noppa3;
+  private Noppa noppa4;
+  private Noppa noppa5;
   
-  private Noppa noppa; 
-  
-  private int silmaluku1;
-  private int silmaluku2;
-  private int silmaluku3;
-  private int silmaluku4;
-  private int silmaluku5;
+
   
   public Yatzy(){
  
+  
+  }
+  
+  public void lisaaTulokset(){
+  
   
   }
   
@@ -32,12 +34,16 @@ public class Yatzy {
       
   
       for (int i=0; i<3; i++){
+      //kun pelaaja pelaa kierroksen, heitetään ensin kaikkia viittä noppaa.    
       noppa1.heitaNoppaa();
       noppa2.heitaNoppaa();
       noppa3.heitaNoppaa();
       noppa4.heitaNoppaa();
       noppa5.heitaNoppaa();
       
+      //tässä pitäisi näyttää tulokset käyttöliittymälle
+      
+          System.out.println(noppa1+""+noppa2+" "+noppa3);
       
       }
   

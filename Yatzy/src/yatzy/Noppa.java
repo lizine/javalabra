@@ -26,4 +26,6 @@ public class Noppa {
     public int getSilmaluku() {
         return this.silmaluku;
     }
+    
+    
 }
