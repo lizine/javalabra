@@ -22,6 +22,10 @@ public class Pelaaja {
     }
     
     
+    public String setNimi(String nimi) {
+        this.nimi = nimi;
+    }
+    
      public String getNimi() {
         return nimi;
     }
