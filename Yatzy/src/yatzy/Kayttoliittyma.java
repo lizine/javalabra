@@ -4,12 +4,39 @@
  */
 package yatzy;
 
+import java.awt.Container;
+import java.awt.Dimension;
+import javax.swing.JFrame;
+import javax.swing.WindowConstants;
+
 /**
  *
  * @author lini
  */
-public class Kayttoliittyma {
+public class Kayttoliittyma implements Runnable {
+
+    private JFrame frame;
+    private Yatzy yatzy;
+
+    public Kayttoliittyma() {
+    }
+
+    @Override
+    public void run() {
+        frame = new JFrame("Yatzy");
+        frame.setPreferredSize(new Dimension(500, 800));
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        luoKomponentit(frame.getContentPane());
+        
+        frame.pack();
+        frame.setVisible(true);
+
+    }
     
-   
+    private void luoKomponentit(Container container) {
+    }
     
+    public JFrame getFrame() {
+        return frame;
+    }
 }

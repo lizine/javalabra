@@ -22,7 +22,7 @@ public class Pelaaja {
     }
     
     
-    public String setNimi(String nimi) {
+    public void setNimi(String nimi) {
         this.nimi = nimi;
     }
     
