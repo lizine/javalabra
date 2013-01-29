@@ -26,8 +26,11 @@ public class Noppa {
     }
 
     public void heitaNoppaa() {
-        //if ()
-        this.silmaluku = (int) (Math.random() * 6) + 1;
+        if (lukittu==false){
+            this.silmaluku = (int) (Math.random() * 6) + 1;
+        }
+        
+        
 
     }
 

@@ -4,6 +4,8 @@
  */
 package yatzy;
 
+import GUI.Kayttoliittyma;
+
 /**
  *
  * @author lini

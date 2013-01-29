@@ -4,22 +4,51 @@
  */
 package yatzy;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 /**
  *
  * @author lini
  */
 public class Pisteidenlasku {
 
-    public int ykkoset() {
-        int summa1 = 0;
+    private Map<String, Integer> tulostaulu = new HashMap<>();
+    private List<Noppa> nopat;
 
-        
-        
-        return summa1;
+    public Pisteidenlasku(List<Noppa> nopat) {
+        this.nopat = nopat;
+
     }
 
-    public int kakkoset() {
+    public void ykkoset() {
+        //suoritetaan jos käyttäjä on valinnut käyttöliittymästä pistelistasta kohdan "ykköset"
+        //tarkistetaan noppa kerrallaan onko silmäluku 1, jos on, lisätään summaan +1.
+        int summa1 = 0;
+
+        for (int i = 0; i < nopat.size(); i++) {
+
+            if (nopat.get(i).getSilmaluku() == 1) {
+                summa1 = summa1 + 1;
+            }
+        }
+
+        //lisätään summa tuostaulu-hashmappiin avaimella "ykköset" ja pisteinä silmälukujen summa
+        tulostaulu.put("ykköset", summa1);
+
+    }
+
+    public void kakkoset() {
         int summa2 = 0;
-        return summa2;
+
+        for (int i = 0; i < nopat.size(); i++) {
+
+            if (nopat.get(i).getSilmaluku() == 2) {
+                summa2 = summa2 + 2;
+            }
+        }
+        tulostaulu.put("kakkoset", summa2);
+
     }
 }
