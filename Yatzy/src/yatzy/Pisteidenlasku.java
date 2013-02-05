@@ -11,6 +11,9 @@ import java.util.Map;
 /**
  *
  * @author lini
+ * Pisteidenlaskuluokka vastaa tulosten kirjaamisesta ja tarkastamisesta.
+ * Kun pelaaja valitsee käyttöliittymästä mihin kohtaan pisteet halutaan kirjata, tässä luokassa tarkastetaan että 
+ * pisteet VOI kirjata ko.sarakkeeseen, sekä tallennetaan tulokset Hashmappiin.
  */
 public class Pisteidenlasku {
 
