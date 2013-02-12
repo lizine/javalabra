@@ -126,4 +126,63 @@ public class PisteidenlaskuTest {
         int result = (int)pisteidenlasku.getTuloslista().get("kolmoset");
         assertEquals(expResult, result);
     }
+       @Test
+    public void testNeloset() {
+        Yatzy yatzy = new Yatzy();
+        
+        List <Noppa>noppalista = yatzy.getNoppaLista();
+        
+        
+        for (int i=0; i<5;i++){
+            noppalista.get(i).setSilmaluku(4);
+        }
+        Pisteidenlasku pisteidenlasku = new Pisteidenlasku(noppalista);
+        pisteidenlasku.neloset();
+        
+       
+        
+        int expResult = 20;
+        int result = (int)pisteidenlasku.getTuloslista().get("neloset");
+        assertEquals(expResult, result);
+    }
+       @Test
+    public void testVitoset() {
+        Yatzy yatzy = new Yatzy();
+        
+        List <Noppa>noppalista = yatzy.getNoppaLista();
+        
+        
+        for (int i=0; i<5;i++){
+            noppalista.get(i).setSilmaluku(5);
+        }
+        Pisteidenlasku pisteidenlasku = new Pisteidenlasku(noppalista);
+        pisteidenlasku.vitoset();
+        
+       
+        
+        int expResult = 25;
+        int result = (int)pisteidenlasku.getTuloslista().get("vitoset");
+        assertEquals(expResult, result);
+    }
+         @Test
+    public void testKutoset() {
+        Yatzy yatzy = new Yatzy();
+        
+        List <Noppa>noppalista = yatzy.getNoppaLista();
+        
+        
+        for (int i=0; i<5;i++){
+            noppalista.get(i).setSilmaluku(6);
+        }
+        Pisteidenlasku pisteidenlasku = new Pisteidenlasku(noppalista);
+        pisteidenlasku.kutoset();
+        
+       
+        
+        int expResult = 30;
+        int result = (int)pisteidenlasku.getTuloslista().get("kutoset");
+        assertEquals(expResult, result);
+    }
+     
+     
 }
