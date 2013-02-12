@@ -43,6 +43,9 @@ public class Kayttoliittyma implements Runnable {
     private JButton noppa4;
     private JButton noppa5;
     private List<Noppa> nopat;
+    Lukituskuuntelija lukituskuuntelija = new Lukituskuuntelija(noppa1,noppa2,noppa3,noppa4,noppa5,nopat, yatzy);
+   
+    
     
     public Kayttoliittyma() {
     yatzy = new Yatzy();
@@ -82,32 +85,39 @@ public class Kayttoliittyma implements Runnable {
 
         container.add(heitaNoppaa);
         container.add(tulosTaulukko());
+        container.add(yhteispisteet());
+        
     }
 
     private JPanel luoNopat() {
         JPanel noppaPaneli = new JPanel(new GridLayout(1, 5));
 
-        Icon noppa1img = new ImageIcon("noppa4.jpg");
+        Icon noppa1img = new ImageIcon("noppa1.jpg");
         noppa1 = new JButton(noppa1img);
+        noppa1.addActionListener(lukituskuuntelija);
         noppaPaneli.add(noppa1);
         
        
 
-        Icon noppa2img = new ImageIcon("noppa4.jpg");
+        Icon noppa2img = new ImageIcon("noppa1.jpg");
         noppa2 = new JButton(noppa2img);
+        noppa2.addActionListener(lukituskuuntelija);
         noppaPaneli.add(noppa2);
 
 
-        Icon noppa3img = new ImageIcon("noppa4.jpg");
+        Icon noppa3img = new ImageIcon("noppa1.jpg");
         noppa3 = new JButton(noppa3img);
+        noppa3.addActionListener(lukituskuuntelija);
         noppaPaneli.add(noppa3);
 
-        Icon noppa4img = new ImageIcon("noppa4.jpg");
+        Icon noppa4img = new ImageIcon("noppa1.jpg");
         noppa4 = new JButton(noppa4img);
+        noppa4.addActionListener(lukituskuuntelija);
         noppaPaneli.add(noppa4);
 
-        Icon noppa5img = new ImageIcon("noppa4.jpg");
+        Icon noppa5img = new ImageIcon("noppa1.jpg");
         noppa5 = new JButton(noppa5img);
+        noppa5.addActionListener(lukituskuuntelija);
         noppaPaneli.add(noppa5);
         return noppaPaneli;
     }
@@ -116,6 +126,7 @@ public class Kayttoliittyma implements Runnable {
         JPanel tulospaneli = new JPanel(new GridLayout(5, 2));
 
         JButton BTNykkoset = new JButton("ykköset:");
+        BTNykkoset.addActionListener(new Pistekuuntelija(yatzy));
         JButton BTNkakkoset = new JButton("kakkoset:");
         JButton BTNkolmoset = new JButton("kolmoset:");
         JButton BTNneloset = new JButton("neloset:");
@@ -125,6 +136,8 @@ public class Kayttoliittyma implements Runnable {
         JTextField kolmoset = new JTextField();
         JTextField neloset = new JTextField();
         JTextField vitoset = new JTextField();
+       // 
+        
 
         tulospaneli.add(BTNykkoset);
         tulospaneli.add(ykkoset);
@@ -136,9 +149,22 @@ public class Kayttoliittyma implements Runnable {
         tulospaneli.add(neloset);
         tulospaneli.add(BTNvitoset);
         tulospaneli.add(vitoset);
+        //tulospaneli.add(yhteispisteet);
         return tulospaneli;
     }
 
+    private JPanel yhteispisteet (){
+     JPanel yhteispisteetPanel = new JPanel(new GridLayout(1, 2));
+     
+     JLabel pisteet = new JLabel("yhteispisteet:");
+     JTextField yhteispisteet = new JTextField();
+     //yhteispisteetPanel.add(pisteet);
+    // yhteispisteetPanel.add(yhteispisteet);
+     
+     
+     return yhteispisteetPanel;
+    }
+    
     public JFrame getFrame() {
         return frame;
     }

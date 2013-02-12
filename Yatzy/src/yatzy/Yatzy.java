@@ -30,8 +30,10 @@ public class Yatzy {
         nopat.add(noppa5);
         pisteidenlasku = new Pisteidenlasku(nopat);
 
-
+ 
     }
+    
+    
 
     public void valitseLisattavatTulokset() {
         //tapahtumankuuntelija käyttöliittymässä katsoo mihin kohtaan
@@ -97,5 +99,9 @@ public class Yatzy {
     
     public List getNoppaLista(){
     return nopat;
+    }
+    
+    public Pisteidenlasku getPisteidenlasku(){
+    return pisteidenlasku;
     }
 }
