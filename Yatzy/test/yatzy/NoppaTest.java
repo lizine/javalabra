@@ -89,7 +89,7 @@ public class NoppaTest {
     public void testLukittuukoNoppa() {
         System.out.println("Lukittuuko noppa lukittaessa.");
         Noppa noppa = new Noppa();
-        noppa.lukitseNoppa(true);
+        noppa.lukitseNoppa();
         boolean expResult = true;
         boolean result = noppa.onkoLukittu();
         assertEquals(expResult, result);

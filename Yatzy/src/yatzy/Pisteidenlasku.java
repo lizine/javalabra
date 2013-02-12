@@ -36,13 +36,13 @@ public class Pisteidenlasku {
                 summa1 = summa1 + 1;
             }
         }
-
+ 
         //lisätään summa tuostaulu-hashmappiin avaimella "ykköset" ja pisteinä silmälukujen summa
-        tulostaulu.put("ykköset", summa1);
+        tulostaulu.put("ykkoset", summa1);
 
     }
 
-    public void kakkoset() {
+    public void kakkoset() { 
         int summa2 = 0;
 
         for (int i = 0; i < 5; i++) {

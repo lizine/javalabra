@@ -15,7 +15,7 @@ public class Noppa {
     private int silmaluku;
     private boolean lukittu;
 
-    public Noppa() {
+    public Noppa() { 
         /**
          * Asetetaan oletuksena nopan silmäluvuksi 1. Pelin alkutilanteessa siis
          * jokaisen nopan silmäluku on 1.
@@ -59,12 +59,17 @@ public class Noppa {
      * Metodin tarkoitus on lukita noppa jos käyttäjä niin valitsee. Tällöin noppaa ei voi enää heittää.
      */
     
-    public void lukitseNoppa(boolean lukittu) {
-        if (lukittu = true) {
+    public void lukitseNoppa() {
+      //  if (lukittu = true) {
             this.lukittu = true;
-        } else {
-            this.lukittu = false;
-        }
+       // } else {
+         //   this.lukittu = false;
+        //}
 
+       
+    }
+    
+     public void vapautaNoppa(){
+        this.lukittu=false;
     }
 }

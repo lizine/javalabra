@@ -3,6 +3,7 @@
  * and open the template in the editor.
  */
 package yatzy;
+
 import GUI.*;
 import java.util.*;
 
@@ -13,7 +14,7 @@ import java.util.*;
  * Pisteidenlaskuluokalle. Pisteidenlaskua varten.
  */
 public class Yatzy {
-
+    
     private List<Noppa> nopat = new ArrayList<Noppa>();
     private Noppa noppa1 = new Noppa();
     private Noppa noppa2 = new Noppa();
@@ -21,7 +22,8 @@ public class Yatzy {
     private Noppa noppa4 = new Noppa();
     private Noppa noppa5 = new Noppa();
     private Pisteidenlasku pisteidenlasku;
-
+    private int kierros = 0;
+    
     public Yatzy() {
         nopat.add(noppa1);
         nopat.add(noppa2);
@@ -29,36 +31,19 @@ public class Yatzy {
         nopat.add(noppa4);
         nopat.add(noppa5);
         pisteidenlasku = new Pisteidenlasku(nopat);
-
- 
+        
+        
     }
     
     
-
-    public void valitseLisattavatTulokset() {
-        //tapahtumankuuntelija käyttöliittymässä katsoo mihin kohtaan
-        //käyttäjä haluaa lisätä tulokset.
-        // if (ykkoset==true){
-        //pisteidenlasku.ykkoset();
-        //  }
-        //else if (kakkoset==true){
-        //pisteidenlasku.kakkoset();
-        //}
-    }
-
+    
     public void pelaaKierros() {
-      //  for (int i = 0; i < 3; i++) {
-            heitaNopat();
-            
-            nopanLukitus();
-            valitseLisattavatTulokset();
-      // }
-        //kierroksen lopuksi poistetaan lukitus kaikista nopista
-      //  for (int i = 0; i < nopat.size(); i++) {
-        //    nopat.get(i).lukitseNoppa(false);
-        //}
-    }
+      
+        heitaNopat();
+        kierros++;
 
+    }
+    
     public void heitaNopat() {
 
         /**
@@ -72,7 +57,7 @@ public class Yatzy {
         noppa3.heitaNoppaa();
         noppa4.heitaNoppaa();
         noppa5.heitaNoppaa();
-        
+
         //lisätään noppien silmäluvut ArrayListiin
 
         nopat.add(noppa1);
@@ -80,28 +65,35 @@ public class Yatzy {
         nopat.add(noppa3);
         nopat.add(noppa4);
         nopat.add(noppa4);
-
-        //tässä pitäisi näyttää tulokset käyttöliittymälle
-
-        // System.out.println(noppa1 + "" + noppa2 + " " + noppa3 + " " + noppa4 + " " + noppa5);
-
-
-
-
-    }
-
-    public void nopanLukitus() {
-        //actionlistener jokaiselle 5:lle nopalle käyttöliittymästä.
-        //jos noppa valittu -> sitä ei voi heittää.
-        //kutsut nopille 
-        // noppa1.lukitseNoppa();
+        
     }
     
-    public List getNoppaLista(){
-    return nopat;
+    public List getNoppaLista() {
+        return nopat;
     }
     
-    public Pisteidenlasku getPisteidenlasku(){
-    return pisteidenlasku;
+    public Pisteidenlasku getPisteidenlasku() {
+        return pisteidenlasku;
     }
+    
+    public int getKierros() {
+        return this.kierros;
+    }
+    
+    public void nollaaKierros() {
+        this.kierros = 0;
+    }
+    
+    public void nollaaNopat() {
+        for (int i = 0; i <= 5; i++) {
+            nopat.get(i).vapautaNoppa();
+        }
+        
+    }
+    //    public void nopanLukitus() {
+//        //actionlistener jokaiselle 5:lle nopalle käyttöliittymästä.
+//        //jos noppa valittu -> sitä ei voi heittää.
+//        //kutsut nopille 
+//        // noppa1.lukitseNoppa();
+//    }
 }

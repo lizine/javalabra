@@ -76,10 +76,11 @@ public class NoppaKuuntelija implements ActionListener {
 
 
 
-        if (kierros < 3) {
-            kierros++;
+        if (yatzy.getKierros() < 3) {
+         
             yatzy.pelaaKierros();
             System.out.println("Kuuntelija kuunteli!");
+            System.out.println(yatzy.getKierros()+" kierros");
 
 
             if (nopat.get(0).getSilmaluku() == 1) {

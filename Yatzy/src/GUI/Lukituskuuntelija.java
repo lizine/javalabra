@@ -44,13 +44,29 @@ public class Lukituskuuntelija implements ActionListener {
         
        if (source.equals(noppa1)){
            System.out.println("noppa1");
+           nopat.get(0).lukitseNoppa();
+           
+        
        }
        else if (source.equals(noppa2)) {
            System.out.println("noppa2");
+           nopat.get(1).lukitseNoppa();
        }
-       else {
-           System.out.println("jotain muuta");
+       else if (source.equals(noppa3)){
+           nopat.get(2).lukitseNoppa();
+           System.out.println("3");
        }
+        else if (source.equals(noppa4)){
+           nopat.get(3).lukitseNoppa();
+           System.out.println("4a");
+       }
+       
+        else if (source.equals(noppa5)){
+           nopat.get(4).lukitseNoppa();
+           System.out.println("5");
+       }
+         
+       
        
 //      if (source.equals(nopat.get(0))){
 //          nopat.get(0).lukitseNoppa(true);
