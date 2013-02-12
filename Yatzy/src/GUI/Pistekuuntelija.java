@@ -18,6 +18,10 @@ import yatzy.Pisteidenlasku;
 /**
  *
  * @author lini
+ * Tämä luokka kuuntelee käyttöliittymässä tulostaulukossa olevia JButtoneita
+ * Kun käyttäjä on valinnut kohdan johon haluaa lisätä pisteentä ja klikannut ko. JButtonia
+ * Kutsutaan Pisteidenlaskuluokan oikeaa metodia ja haetaan sen tulokset, eli ko. kohdan kokonaisepisteet
+ * jTextfieldiin
  */
 public class Pistekuuntelija implements ActionListener {
 
@@ -62,6 +66,18 @@ public class Pistekuuntelija implements ActionListener {
 
     }
 
+    /**
+     * Tässä tarkastetaan mitä JButtonia käyttäjä on painanut ja kutsutaan
+     * asianmukaista pisteidenlaskumetodia luokasta Pisteidenlasku.
+     * 
+     * Esim ensimmäisessä kohdassa kutsutaan pisteidenlasku.ykkoset joka suorittaa
+     * tarkistuksen täsmäävätkö noppien silmäluvut eli kuinka monta ykköstä nopissa on ja
+     * lisää oikeat pisteet tulostauluun.
+     * 
+     * Tämän jälkeen tekstikenttaan "ykkoset" asetetaan tekstiksi pisteiden summa
+ */
+    
+    
     @Override
     public void actionPerformed(ActionEvent e) {
         System.out.println("pisteet:");
