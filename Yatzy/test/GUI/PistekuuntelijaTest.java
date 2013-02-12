@@ -2,9 +2,9 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package yatzy;
+package GUI;
 
-import java.util.List;
+import java.awt.event.ActionEvent;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -16,9 +16,9 @@ import static org.junit.Assert.*;
  *
  * @author lini
  */
-public class PelaajaTest {
+public class PistekuuntelijaTest {
     
-    public PelaajaTest() {
+    public PistekuuntelijaTest() {
     }
     
     @BeforeClass
@@ -38,26 +38,10 @@ public class PelaajaTest {
     }
 
     /**
-     * Test of getNimi method, of class Pelaaja.
+     * Test of actionPerformed method, of class Pistekuuntelija.
      */
     @Test
-    public void testGetNimi() {
-       
-    }
-
-    /**
-     * Test of lisaaTulos method, of class Pelaaja.
-     */
-    @Test
-    public void testLisaaTulos() {
-     
-    }
-
-    /**
-     * Test of getPisteet method, of class Pelaaja.
-     */
-    @Test
-    public void testGetPisteet() {
+    public void testActionPerformed() {
      
     }
 }

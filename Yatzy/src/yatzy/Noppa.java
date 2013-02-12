@@ -47,6 +47,10 @@ public class Noppa {
         return this.silmaluku;
     }
 
+    
+    public void setSilmaluku(int numero) {
+       this.silmaluku=numero;
+    }
     /**
      * 
      * onkoLukittu kertoo onko noppa lukittuna vai ei

@@ -7,6 +7,8 @@ package GUI;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import yatzy.Yatzy;
 import javax.swing.JButton;
 import yatzy.Noppa;
@@ -25,6 +27,14 @@ public class Lukituskuuntelija implements ActionListener {
     private Yatzy yatzy;
     private List<Noppa> nopat;
 
+    Icon noppa1aimg = new ImageIcon("noppa1a.jpg");
+    Icon noppa2aimg = new ImageIcon("noppa2a.jpg");
+    Icon noppa3aimg = new ImageIcon("noppa3a.jpg");
+    Icon noppa4aimg = new ImageIcon("noppa4a.jpg");
+    Icon noppa5aimg = new ImageIcon("noppa5a.jpg");
+    Icon noppa6aimg = new ImageIcon("noppa6a.jpg");
+    
+    
     public Lukituskuuntelija(JButton noppa1, JButton noppa2, JButton noppa3, JButton noppa4, JButton noppa5, List nopat, Yatzy yatzy) {
         this.noppa1 = noppa1;
         this.noppa2 = noppa2;
@@ -39,6 +49,8 @@ public class Lukituskuuntelija implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
        // System.out.println("noppa valittu");
+        
+        
        
        Object source = e.getSource();
         
@@ -46,6 +58,7 @@ public class Lukituskuuntelija implements ActionListener {
            System.out.println("noppa1");
            nopat.get(0).lukitseNoppa();
            
+          
         
        }
        else if (source.equals(noppa2)) {

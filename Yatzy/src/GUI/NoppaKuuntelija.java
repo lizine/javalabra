@@ -30,6 +30,14 @@ public class NoppaKuuntelija implements ActionListener {
     private JButton noppa4;
     private JButton noppa5;
     private Yatzy yatzy;
+    //noppien kuvien esittely
+    Icon noppa1aimg = new ImageIcon("noppa1a.jpg");
+    Icon noppa2aimg = new ImageIcon("noppa2a.jpg");
+    Icon noppa3aimg = new ImageIcon("noppa3a.jpg");
+    Icon noppa4aimg = new ImageIcon("noppa4a.jpg");
+    Icon noppa5aimg = new ImageIcon("noppa5a.jpg");
+    Icon noppa6aimg = new ImageIcon("noppa6a.jpg");
+    //lukittujen noppien kuvat
     Icon noppa1img = new ImageIcon("noppa1.jpg");
     Icon noppa2img = new ImageIcon("noppa2.jpg");
     Icon noppa3img = new ImageIcon("noppa3.jpg");
@@ -77,91 +85,120 @@ public class NoppaKuuntelija implements ActionListener {
 
 
         if (yatzy.getKierros() < 3) {
-         
+
             yatzy.pelaaKierros();
             System.out.println("Kuuntelija kuunteli!");
-            System.out.println(yatzy.getKierros()+" kierros");
+            System.out.println(yatzy.getKierros() + " kierros");
 
 
-            if (nopat.get(0).getSilmaluku() == 1) {
+            if (nopat.get(0).getSilmaluku() == 1 && nopat.get(0).onkoLukittu() == false) {
+                noppa1.setIcon(noppa1aimg);
+
+            } else if (nopat.get(0).getSilmaluku() == 1 && nopat.get(0).onkoLukittu() == true) {
                 noppa1.setIcon(noppa1img);
-                
-            } else if (nopat.get(0).getSilmaluku() == 2) {
+            } //toinen noppa
+            else if (nopat.get(0).getSilmaluku() == 2 && nopat.get(0).onkoLukittu() == false) {
+                noppa1.setIcon(noppa2aimg);
+
+            } else if (nopat.get(0).getSilmaluku() == 2 && nopat.get(0).onkoLukittu() == true) {
                 noppa1.setIcon(noppa2img);
-            } else if (nopat.get(0).getSilmaluku() == 3) {
+              
+                //kolmas noppa
+            } else if (nopat.get(0).getSilmaluku() == 3  && nopat.get(0).onkoLukittu() == false) {
+                noppa1.setIcon(noppa3aimg);
+             
+            } else if (nopat.get(0).getSilmaluku() == 3  && nopat.get(0).onkoLukittu() == true) {
                 noppa1.setIcon(noppa3img);
-            } else if (nopat.get(0).getSilmaluku() == 4) {
+            }
+            
+            
+            else if (nopat.get(0).getSilmaluku() == 4 && nopat.get(0).onkoLukittu() == false) {
+                noppa1.setIcon(noppa4aimg);
+            } 
+            
+              else if (nopat.get(0).getSilmaluku() == 4 && nopat.get(0).onkoLukittu() == true) {
                 noppa1.setIcon(noppa4img);
-            } else if (nopat.get(0).getSilmaluku() == 5) {
+            }
+            
+            else if (nopat.get(0).getSilmaluku() == 5 && nopat.get(0).onkoLukittu() == false ) {
+                noppa1.setIcon(noppa5aimg);
+            } 
+            
+             else if (nopat.get(0).getSilmaluku() == 5 && nopat.get(0).onkoLukittu() == true ) {
                 noppa1.setIcon(noppa5img);
-            } else if (nopat.get(0).getSilmaluku() == 6) {
+            }
+            
+            else if (nopat.get(0).getSilmaluku() == 6  && nopat.get(0).onkoLukittu() == false) {
+                noppa1.setIcon(noppa6aimg);
+            }
+            else if (nopat.get(0).getSilmaluku() == 6  && nopat.get(0).onkoLukittu() == true) {
                 noppa1.setIcon(noppa6img);
             }
 
 
             //noppa2
             if (nopat.get(1).getSilmaluku() == 1) {
-                noppa2.setIcon(noppa1img);
+                noppa2.setIcon(noppa1aimg);
             } else if (nopat.get(1).getSilmaluku() == 2) {
-                noppa2.setIcon(noppa2img);
+                noppa2.setIcon(noppa2aimg);
             } else if (nopat.get(1).getSilmaluku() == 3) {
-                noppa2.setIcon(noppa3img);
+                noppa2.setIcon(noppa3aimg);
             } else if (nopat.get(1).getSilmaluku() == 4) {
-                noppa2.setIcon(noppa4img);
+                noppa2.setIcon(noppa4aimg);
             } else if (nopat.get(1).getSilmaluku() == 5) {
-                noppa2.setIcon(noppa5img);
+                noppa2.setIcon(noppa5aimg);
             } else if (nopat.get(1).getSilmaluku() == 6) {
-                noppa2.setIcon(noppa6img);
+                noppa2.setIcon(noppa6aimg);
             }
 
             //noppa3
             if (nopat.get(2).getSilmaluku() == 1) {
-                noppa3.setIcon(noppa1img);
+                noppa3.setIcon(noppa1aimg);
             } else if (nopat.get(2).getSilmaluku() == 2) {
-                noppa3.setIcon(noppa2img);
+                noppa3.setIcon(noppa2aimg);
             } else if (nopat.get(2).getSilmaluku() == 3) {
-                noppa3.setIcon(noppa3img);
+                noppa3.setIcon(noppa3aimg);
             } else if (nopat.get(2).getSilmaluku() == 4) {
-                noppa3.setIcon(noppa4img);
+                noppa3.setIcon(noppa4aimg);
             } else if (nopat.get(2).getSilmaluku() == 5) {
-                noppa3.setIcon(noppa5img);
+                noppa3.setIcon(noppa5aimg);
             } else if (nopat.get(2).getSilmaluku() == 6) {
-                noppa3.setIcon(noppa6img);
+                noppa3.setIcon(noppa6aimg);
             }
             //noppa4
             if (nopat.get(3).getSilmaluku() == 1) {
-                noppa4.setIcon(noppa1img);
+                noppa4.setIcon(noppa1aimg);
             } else if (nopat.get(3).getSilmaluku() == 2) {
-                noppa4.setIcon(noppa2img);
+                noppa4.setIcon(noppa2aimg);
             } else if (nopat.get(3).getSilmaluku() == 3) {
-                noppa4.setIcon(noppa3img);
+                noppa4.setIcon(noppa3aimg);
             } else if (nopat.get(3).getSilmaluku() == 4) {
-                noppa4.setIcon(noppa4img);
+                noppa4.setIcon(noppa4aimg);
             } else if (nopat.get(3).getSilmaluku() == 5) {
-                noppa4.setIcon(noppa5img);
+                noppa4.setIcon(noppa5aimg);
             } else if (nopat.get(3).getSilmaluku() == 6) {
-                noppa4.setIcon(noppa6img);
+                noppa4.setIcon(noppa6aimg);
             }
 
             //noppa5
             if (nopat.get(4).getSilmaluku() == 1) {
-                noppa5.setIcon(noppa1img);
+                noppa5.setIcon(noppa1aimg);
             } else if (nopat.get(4).getSilmaluku() == 2) {
-                noppa5.setIcon(noppa2img);
+                noppa5.setIcon(noppa2aimg);
             } else if (nopat.get(4).getSilmaluku() == 3) {
-                noppa5.setIcon(noppa3img);
+                noppa5.setIcon(noppa3aimg);
             } else if (nopat.get(4).getSilmaluku() == 4) {
-                noppa5.setIcon(noppa4img);
+                noppa5.setIcon(noppa4aimg);
             } else if (nopat.get(4).getSilmaluku() == 5) {
-                noppa5.setIcon(noppa5img);
+                noppa5.setIcon(noppa5aimg);
             } else if (nopat.get(4).getSilmaluku() == 6) {
-                noppa5.setIcon(noppa6img);
+                noppa5.setIcon(noppa6aimg);
             }
 
         } else {
             //System.out.println("kirjaa pisteet");
-             JOptionPane.showMessageDialog(null, "Kirjaa pisteet");
-             
+            JOptionPane.showMessageDialog(null, "Kirjaa pisteet");
+
         }
 
         //  noppa2.setIcon(noppa2img);

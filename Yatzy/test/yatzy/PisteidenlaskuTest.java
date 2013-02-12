@@ -5,6 +5,7 @@
 package yatzy;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -49,7 +50,7 @@ public class PisteidenlaskuTest {
     }
       @Test
     public void testTulostauluunArvonLisays() {
-        System.out.println("tulostauluun lisäys");
+       
          Map<String, Integer> tulostaulu = new HashMap<>();
          tulostaulu.put("ykköset", 1);
         int expResult = 1;
@@ -65,11 +66,23 @@ public class PisteidenlaskuTest {
      */
     @Test
     public void testYkkoset() {
-        System.out.println("ykkoset");
-        Pisteidenlasku instance = null;
-        instance.ykkoset();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        Yatzy yatzy = new Yatzy();
+        
+        List <Noppa>noppalista = yatzy.getNoppaLista();
+        
+        
+        for (int i=0; i<5;i++){
+            noppalista.get(i).setSilmaluku(1);
+        }
+        Pisteidenlasku pisteidenlasku = new Pisteidenlasku(noppalista);
+        pisteidenlasku.ykkoset();
+        
+       
+        
+        int expResult = 5;
+        int result = (int)pisteidenlasku.getTuloslista().get("ykkoset");
+        assertEquals(expResult, result);
+        
     }
 
     /**
@@ -77,10 +90,40 @@ public class PisteidenlaskuTest {
      */
     @Test
     public void testKakkoset() {
-        System.out.println("kakkoset");
-        Pisteidenlasku instance = null;
-        instance.kakkoset();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        Yatzy yatzy = new Yatzy();
+        
+        List <Noppa>noppalista = yatzy.getNoppaLista();
+        
+        
+        for (int i=0; i<5;i++){
+            noppalista.get(i).setSilmaluku(2);
+        }
+        Pisteidenlasku pisteidenlasku = new Pisteidenlasku(noppalista);
+        pisteidenlasku.kakkoset();
+        
+       
+        
+        int expResult = 10;
+        int result = (int)pisteidenlasku.getTuloslista().get("kakkoset");
+        assertEquals(expResult, result);
+    }
+     @Test
+    public void testKolmoset() {
+        Yatzy yatzy = new Yatzy();
+        
+        List <Noppa>noppalista = yatzy.getNoppaLista();
+        
+        
+        for (int i=0; i<5;i++){
+            noppalista.get(i).setSilmaluku(3);
+        }
+        Pisteidenlasku pisteidenlasku = new Pisteidenlasku(noppalista);
+        pisteidenlasku.kolmoset();
+        
+       
+        
+        int expResult = 15;
+        int result = (int)pisteidenlasku.getTuloslista().get("kolmoset");
+        assertEquals(expResult, result);
     }
 }

@@ -36,9 +36,11 @@ public class Pistekuuntelija implements ActionListener {
     private JButton BTNneloset;
     private JButton BTNvitoset;
     private JButton BTNkutoset;
+    
+    private JTextField TXTpisteet;
     private int yhteispisteet=0;
     
-    public Pistekuuntelija(Yatzy yatzy, List nopat, JTextField ykkoset, JTextField kakkoset, JTextField kolmoset, JTextField neloset, JTextField vitoset, JTextField kutoset, JButton BTNykkoset, JButton BTNkakkoset, JButton BTNkolmoset, JButton BTNneloset, JButton BTNvitoset, JButton BTNkutoset) {
+    public Pistekuuntelija(Yatzy yatzy, List nopat, JTextField ykkoset, JTextField kakkoset, JTextField kolmoset, JTextField neloset, JTextField vitoset, JTextField kutoset, JButton BTNykkoset, JButton BTNkakkoset, JButton BTNkolmoset, JButton BTNneloset, JButton BTNvitoset, JButton BTNkutoset, JTextField TXTpisteet) {
         this.yatzy = yatzy;
         this.pisteidenlasku = yatzy.getPisteidenlasku();
         this.ykkoset = ykkoset;
@@ -54,6 +56,9 @@ public class Pistekuuntelija implements ActionListener {
         this.BTNvitoset = BTNvitoset;
         this.BTNkutoset = BTNkutoset;
         this.nopat = nopat;
+        this.TXTpisteet = TXTpisteet;
+        
+        
 
     }
 
@@ -61,17 +66,29 @@ public class Pistekuuntelija implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         System.out.println("pisteet:");
         
+      
+        
 
         Object source = e.getSource();
 
         if (source.equals(BTNykkoset)) {
             System.out.println("ykköset");
             pisteidenlasku.ykkoset();
-            String pisteet1 = pisteidenlasku.getTuloslista().get("ykkoset") + " pistettä";
-            System.out.println(pisteet1);
+            int tulos = (int)pisteidenlasku.getTuloslista().get("ykkoset");
+            String pisteet1 = tulos + " pistettä";
+            
+           // System.out.println(pisteet1);  - testikäyttöön
+          //  yhteispisteet=yhteispisteet+tulos;
+           // System.out.println(yhteispisteet + " yhteensä");
+            //this.TXTpisteet.setText("pistettä");
+            
             this.ykkoset.setText(pisteet1);
-           
+            
+          
             BTNykkoset.setEnabled(false);
+            
+            
+         
             
           
             
@@ -118,21 +135,23 @@ public class Pistekuuntelija implements ActionListener {
         }
 
 
-       pisteidenlasku.kakkoset();
-       pisteidenlasku.kolmoset();
-        pisteidenlasku.neloset();
-        pisteidenlasku.vitoset();
-           pisteidenlasku.kutoset();
+//       pisteidenlasku.kakkoset();
+//       pisteidenlasku.kolmoset();
+//        pisteidenlasku.neloset();
+//        pisteidenlasku.vitoset();
+//           pisteidenlasku.kutoset();
         System.out.println("kierros pelattu");
         System.out.println(pisteidenlasku.getTuloslista());
         yatzy.nollaaKierros();
         yatzy.nollaaNopat();
         
+        
+        
 
         if ( !BTNykkoset.isEnabled() && !BTNkakkoset.isEnabled() && !BTNkolmoset.isEnabled() && !BTNneloset.isEnabled() && !BTNvitoset.isEnabled() && !BTNkutoset.isEnabled()){
             JOptionPane.showMessageDialog(null, "Peli loppui!");
             
-            
+            this.TXTpisteet.setText("pistettä");
         }
         
 
