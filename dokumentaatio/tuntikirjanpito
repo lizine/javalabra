@@ -6,3 +6,4 @@ Koodin refaktorointi (UIG paketin lisäys) ja sovelluskoodin parantelu 29.1 n.2h
 Testien kirjoittaminen 29.1 n.1h
 Käyttöliittymän tekeminen, noppien silmälukujen esittäminen käyttöliittymässä 4.2. 5h.
 Javadocin kirjoittaminen, luokkien kuvaukset ja suurin osa metodeista dokumentoitu 5.2. 1h
+Koodin refaktorointi, noppien kuvien muuttaminen erottaminen omaksi metodikseen (pitänee vielä erottaa omaksi luokakseen sillä nyt on copypastea). Lisätty myös noppien kuvien vaihtuminen heti kun käyttäjä lukitsee nopan. Ennen vaihtui vasta seuraavalla kierroksella kun heitä noppaa -nappia oli painettu.  18.2 2,5h
