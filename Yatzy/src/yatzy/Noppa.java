@@ -76,4 +76,5 @@ public class Noppa {
      public void vapautaNoppa(){
         this.lukittu=false;
     }
+     
 }

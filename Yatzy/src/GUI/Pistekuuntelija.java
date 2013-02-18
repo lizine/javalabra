@@ -83,6 +83,7 @@ public class Pistekuuntelija implements ActionListener {
         System.out.println("pisteet:");
         
       
+      
         
 
         Object source = e.getSource();
@@ -148,8 +149,11 @@ public class Pistekuuntelija implements ActionListener {
             System.out.println(pisteet6);
             this.kutoset.setText(pisteet6);
              BTNkutoset.setEnabled(false);
+        
         }
-
+      
+      
+     
 
 //       pisteidenlasku.kakkoset();
 //       pisteidenlasku.kolmoset();
@@ -161,7 +165,7 @@ public class Pistekuuntelija implements ActionListener {
         yatzy.nollaaKierros();
         yatzy.nollaaNopat();
         
-        
+         
         
 
         if ( !BTNykkoset.isEnabled() && !BTNkakkoset.isEnabled() && !BTNkolmoset.isEnabled() && !BTNneloset.isEnabled() && !BTNvitoset.isEnabled() && !BTNkutoset.isEnabled()){

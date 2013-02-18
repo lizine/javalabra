@@ -53,7 +53,21 @@ public class Kayttoliittyma implements Runnable {
     private JTextField vitoset;
     private JTextField kutoset;
     private JTextField TXTpisteet;
-
+ //noppien kuvien esittely
+    Icon noppa1aimg = new ImageIcon("noppa1a.jpg");
+    Icon noppa2aimg = new ImageIcon("noppa2a.jpg");
+    Icon noppa3aimg = new ImageIcon("noppa3a.jpg");
+    Icon noppa4aimg = new ImageIcon("noppa4a.jpg");
+    Icon noppa5aimg = new ImageIcon("noppa5a.jpg");
+    Icon noppa6aimg = new ImageIcon("noppa6a.jpg");
+    //lukittujen noppien kuvat
+    Icon noppa1img = new ImageIcon("noppa1.jpg");
+    Icon noppa2img = new ImageIcon("noppa2.jpg");
+    Icon noppa3img = new ImageIcon("noppa3.jpg");
+    Icon noppa4img = new ImageIcon("noppa4.jpg");
+    Icon noppa5img = new ImageIcon("noppa5.jpg");
+    Icon noppa6img = new ImageIcon("noppa6.jpg");
+    
     public Kayttoliittyma() {
         yatzy = new Yatzy();
         nopat = yatzy.getNoppaLista();
@@ -89,31 +103,31 @@ public class Kayttoliittyma implements Runnable {
 
 
 
-        Icon noppa1img = new ImageIcon("noppa1a.jpg");
-        noppa1 = new JButton(noppa1img);
+       // Icon noppa1img = new ImageIcon("noppa1a.jpg");
+        noppa1 = new JButton(noppa1aimg);
         //noppa1.addActionListener(lukituskuuntelija);
         noppaPaneli.add(noppa1);
 
 
 
-        Icon noppa2img = new ImageIcon("noppa1a.jpg");
-        noppa2 = new JButton(noppa2img);
+       // Icon noppa2img = new ImageIcon("noppa1a.jpg");
+        noppa2 = new JButton(noppa1aimg);
         //noppa2.addActionListener(lukituskuuntelija);
         noppaPaneli.add(noppa2);
 
 
-        Icon noppa3img = new ImageIcon("noppa1a.jpg");
-        noppa3 = new JButton(noppa3img);
+      //  Icon noppa3img = new ImageIcon("noppa1a.jpg");
+        noppa3 = new JButton(noppa1aimg);
         //noppa3.addActionListener(lukituskuuntelija);
         noppaPaneli.add(noppa3);
 
-        Icon noppa4img = new ImageIcon("noppa1a.jpg");
-        noppa4 = new JButton(noppa4img);
+    //    Icon noppa4img = new ImageIcon("noppa1a.jpg");
+        noppa4 = new JButton(noppa1aimg);
         //  noppa4.addActionListener(lukituskuuntelija);
         noppaPaneli.add(noppa4);
 
-        Icon noppa5img = new ImageIcon("noppa1a.jpg");
-        noppa5 = new JButton(noppa5img);
+       // Icon noppa5img = new ImageIcon("noppa1a.jpg");
+        noppa5 = new JButton(noppa1aimg);
         // noppa5.addActionListener(lukituskuuntelija);
         noppaPaneli.add(noppa5);
 
@@ -188,4 +202,6 @@ public class Kayttoliittyma implements Runnable {
     public JFrame getFrame() {
         return frame;
     }
+     
+     
 }
