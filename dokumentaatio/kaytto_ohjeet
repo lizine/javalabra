@@ -1,0 +1,14 @@
+Käyttöohjeet - Yatzy
+
+Pelin tarkoitus on kerätä mahdollisimman suuri yhteispistemäärä. Pisteitä saa nopan silmälukuja vastaavan summan.
+
+Pelin alussa kysytään pelajan nimeä. Kirjoita nimesi ja paina OK.
+
+Peli aloitetaan painamalla "heitä noppaa" -nappia.
+Heittoja on maksimissaan 3 per kierros.
+
+Heitettyäsi noppia voit joko kirjata heti haluamasi psiteet ja jatkaa toiselle kierrokselle, tai  lukita 0-5 noppaa ja heittää uudestaan.
+
+Pisteitä voi lisätä vapaassa järjestyksessä. Kun kaikki pistekentät on täytetty, peli loppuu. Koko peli ajan näet yhteispisteesti "yhteispisteet" -sarakkeessa.
+
+Pelin voi lopettaa koska tahansa painamalla punaista ruksia pelin oikeassa yläkulmassa.
