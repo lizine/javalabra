@@ -1,13 +1,32 @@
-Aihemäärittely ja gitin käyttäminen. 15.11.2011 n, 2h
-Luokkakaavion piirtäminen 10min. 21.1.2012
-Koodauksen aloittaminen (luokkien luominen) 21.1.2012 n.2h
-Toiminnallisuuden koodaaminen 28.1 n.2.5h
-Koodin refaktorointi (UIG paketin lisäys) ja sovelluskoodin parantelu 29.1 n.2h
-Testien kirjoittaminen 29.1 n.1h
-Käyttöliittymän tekeminen, noppien silmälukujen esittäminen käyttöliittymässä 4.2. 5h.
-Javadocin kirjoittaminen, luokkien kuvaukset ja suurin osa metodeista dokumentoitu 5.2. 1h
-Testien kirjoittaminen kattamaan miltei koko ohjelma. 3h 11.2
-Pelisovelluksen kirjoittaminen ja koodin refaktorointi. Lisätty eri kuvat nopille niiden lukitustilanteen mukaan, helpottaa pelaamista kun käyttäjä näkee mitä lukittuna.
-Lisäksi koodattu yhteispisteidenlaskua, pelin yleistä logiikkaa kierrosten ja lukitusten osalta. 12.2 n. 9h
+15.11.2012 -  n 2h Aihemäärittely ja gitin käyttäminen. 
 
-Koodin refaktorointi, noppien kuvien muuttaminen erottaminen omaksi metodikseen (pitänee vielä erottaa omaksi luokakseen sillä nyt on copypastea). Lisätty myös noppien kuvien vaihtuminen heti kun käyttäjä lukitsee nopan. Ennen vaihtui vasta seuraavalla kierroksella kun heitä noppaa -nappia oli painettu.  18.2 2,5h
+21.1.2012  - n 10min. Luokkakaavion piirtäminen  
+
+21.1.2012 - n.2hKoodauksen aloittaminen (luokkien luominen) 
+
+28.1 n.2.5h Toiminnallisuuden koodaaminen
+
+29.1 n.2h Koodin refaktorointi (UIG paketin lisäys) ja sovelluskoodin parantelu 
+
+29.1 n.1h Testien kirjoittaminen 
+
+4.2. 5h. Käyttöliittymän tekeminen, noppien silmälukujen esittäminen käyttöliittymässä 
+
+5.2. 1h Javadocin kirjoittaminen, luokkien kuvaukset ja suurin osa metodeista dokumentoitu 
+
+ 3h 11.2 Testien kirjoittaminen kattamaan miltei koko ohjelma.
+
+12.2  - n.9h
+Pelisovelluksen kirjoittaminen ja koodin refaktorointi. Lisätty eri kuvat nopille niiden lukitustilanteen mukaan, helpottaa pelaamista kun käyttäjä näkee mitä lukittuna.
+Lisäksi koodattu yhteispisteidenlaskua, pelin yleistä logiikkaa kierrosten ja lukitusten osalta. 
+
+18.2 - 2,5h
+Koodin refaktorointi, noppien kuvien muuttaminen erottaminen omaksi metodikseen (pitänee vielä erottaa omaksi luokakseen sillä nyt on copypastea). Lisätty myös noppien kuvien vaihtuminen heti kun käyttäjä lukitsee nopan. Ennen vaihtui vasta seuraavalla kierroksella kun heitä noppaa -nappia oli painettu.  
+
+19.2 - 5h 
+Koodattu toiminnallisuutta: 
+Yhteispisteiden summaaminen ja näyttäminen käyttöliittymässä
+Pelaajan nimen kysyminen ennen pelin aloitusta
+Pelaajan nimen + yhteispisteiden näyttäminen pelin lopuksi
+
+Kirjoitettu lisäksi javadocia hieman lisää. Nyt taitaa olla aika kattavasti
