@@ -77,7 +77,6 @@ public class NoppaKuuntelija implements ActionListener {
      * silmäluku ja näytetään sitä vastaava kuva käyttöliittymässä olevassa
      * noppaa vastaavassa JButtonissa.
      *
-     * TÄSSÄ ON VIELÄ RUMAA COPYPASTEA MUTTA KATSOTAAN PAREMMAKSI!!!
      */
     @Override
     public void actionPerformed(ActionEvent e) {
