@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import yatzy.Noppa;
+import yatzy.Pelaaja;
 import yatzy.Yatzy;
 import yatzy.Pisteidenlasku;
 
@@ -41,8 +42,9 @@ public class Pistekuuntelija implements ActionListener {
     private JButton BTNkutoset;
     private JTextField TXTpisteet;
     private int yhteispisteet = 0;
-
-    public Pistekuuntelija(Yatzy yatzy, List nopat, JTextField ykkoset, JTextField kakkoset, JTextField kolmoset, JTextField neloset, JTextField vitoset, JTextField kutoset, JButton BTNykkoset, JButton BTNkakkoset, JButton BTNkolmoset, JButton BTNneloset, JButton BTNvitoset, JButton BTNkutoset, JTextField TXTpisteet) {
+    private Pelaaja pelaaja;
+    private String pelaajanimi;
+    public Pistekuuntelija(Yatzy yatzy, List nopat, JTextField ykkoset, JTextField kakkoset, JTextField kolmoset, JTextField neloset, JTextField vitoset, JTextField kutoset, JButton BTNykkoset, JButton BTNkakkoset, JButton BTNkolmoset, JButton BTNneloset, JButton BTNvitoset, JButton BTNkutoset, JTextField TXTpisteet, Pelaaja pelaaja) {
         this.yatzy = yatzy;
         this.pisteidenlasku = yatzy.getPisteidenlasku();
         this.ykkoset = ykkoset;
@@ -59,7 +61,8 @@ public class Pistekuuntelija implements ActionListener {
         this.BTNvitoset = BTNvitoset;
         this.BTNkutoset = BTNkutoset;
         this.nopat = nopat;
-
+        this.pelaaja = pelaaja;
+        pelaajanimi = pelaaja.getNimi();
 
 
 
@@ -156,21 +159,22 @@ public class Pistekuuntelija implements ActionListener {
         System.out.println("kierros pelattu");
         System.out.println(pisteidenlasku.getTuloslista());
         yatzy.nollaaKierros();
-        yatzy.nollaaNopat();
-
-
+        yatzy.nollaaNopat(); 
 
 
         if (!BTNykkoset.isEnabled() && !BTNkakkoset.isEnabled() && !BTNkolmoset.isEnabled() && !BTNneloset.isEnabled() && !BTNvitoset.isEnabled() && !BTNkutoset.isEnabled()) {
-            JOptionPane.showMessageDialog(null, "Peli loppui! \nPisteesi: " + yhteispisteet);
+            JOptionPane.showMessageDialog(null, "Peli loppui! \nPelaajan "+ pelaajanimi + " pisteet: "+yhteispisteet);
 
             //this.TXTpisteet.setText("pistettä");
+            
         }
 
 
 }
         else{
+           
              JOptionPane.showMessageDialog(null, "Heitä ensin noppaa!");
+             System.out.println(pelaaja.getNimi());
         }
        
 

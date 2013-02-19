@@ -53,7 +53,8 @@ public class Noppa {
     }
     /**
      * 
-     * onkoLukittu kertoo onko noppa lukittuna vai ei
+     * onkoLukittu kertoo onko noppa lukittuna vai ei.
+     * Palauttaa muuttujan lukittu.
      */
     public boolean onkoLukittu() {
         return lukittu;
@@ -64,12 +65,9 @@ public class Noppa {
      */
     
     public void lukitseNoppa() {
-      //  if (lukittu = true) {
+     
             this.lukittu = true;
-       // } else {
-         //   this.lukittu = false;
-        //}
-
+      
        
     }
     

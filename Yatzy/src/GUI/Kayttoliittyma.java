@@ -18,11 +18,13 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.WindowConstants;
 import yatzy.Noppa;
+import yatzy.Pelaaja;
 import yatzy.Yatzy;
 import yatzy.Pisteidenlasku;
 
@@ -54,6 +56,8 @@ public class Kayttoliittyma implements Runnable {
     private JTextField kutoset;
      private JTextField yatzyt;
     private JTextField TXTpisteet;
+    private String pelaajaNimi;
+    private Pelaaja pelaaja;
  //noppien kuvien esittely
     Icon noppa1aimg = new ImageIcon("noppa1a.jpg");
     Icon noppa2aimg = new ImageIcon("noppa2a.jpg");
@@ -71,17 +75,23 @@ public class Kayttoliittyma implements Runnable {
     
     public Kayttoliittyma() {
         yatzy = new Yatzy();
+        pelaaja = new Pelaaja();
         nopat = yatzy.getNoppaLista();
     }
 
     @Override
     public void run() {
+        pelaajaNimi = JOptionPane.showInputDialog(null,"Nimesi");
+        System.out.println(pelaajaNimi);
+        pelaaja.setNimi(pelaajaNimi);
         frame = new JFrame("Yatzy");
         frame.setPreferredSize(new Dimension(500, 800));
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         luoKomponentit(frame.getContentPane());
         frame.pack();
         frame.setVisible(true);
+        
+         
 
     }
 
@@ -107,6 +117,8 @@ public class Kayttoliittyma implements Runnable {
        
         container.add(tulosTaulukko());
         //container.add(yhteispisteet());
+        
+         
 
     }
 
@@ -222,7 +234,7 @@ public class Kayttoliittyma implements Runnable {
         tulospaneli.add(pisteet);
         tulospaneli.add(TXTpisteet);
 
-        Pistekuuntelija pistekuuntelija = new Pistekuuntelija(yatzy, nopat, ykkoset,kakkoset,kolmoset,neloset,vitoset,kutoset, BTNykkoset, BTNkakkoset, BTNkolmoset, BTNneloset, BTNvitoset, BTNkutoset, TXTpisteet);
+        Pistekuuntelija pistekuuntelija = new Pistekuuntelija(yatzy, nopat, ykkoset,kakkoset,kolmoset,neloset,vitoset,kutoset, BTNykkoset, BTNkakkoset, BTNkolmoset, BTNneloset, BTNvitoset, BTNkutoset, TXTpisteet,pelaaja);
         BTNykkoset.addActionListener(pistekuuntelija);
         BTNkakkoset.addActionListener(pistekuuntelija);
         BTNkolmoset.addActionListener(pistekuuntelija);

@@ -106,7 +106,8 @@ public class NoppaKuuntelija implements ActionListener {
      /**
      * Käydään jokainen noppa läpi, katsotaan mikä silmäluku nopalla on ja onko 
      * lukitus true tai false. Tulosten perusteella näytetään nopan silmälukua 
-     * ja lukitustilaa vastaava kuva.
+     * ja lukitustilaa vastaava kuva. Yrityksistä huolimatta monien muuttuvien tekijöiden
+     * vuoksi en saanut tätä hoidettua esim loopilla.
      */
 
     public void vaihdaNoppakuvat() {
