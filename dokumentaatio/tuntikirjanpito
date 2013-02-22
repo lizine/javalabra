@@ -30,3 +30,9 @@ Pelaajan nimen kysyminen ennen pelin aloitusta
 Pelaajan nimen + yhteispisteiden näyttäminen pelin lopuksi
 
 Kirjoitettu lisäksi javadocia hieman lisää. Nyt taitaa olla aika kattavasti
+
+20.2. -3h
+Yritetty saada koodia vielä siistimmäksi noppien kuvien vaihtamisen osalta,mutta ei onnistu
+
+22.2 3h
+Tehty vielä lisää testejä, korjattu Random()in käyttö, kirjoitettu testausdokumenttia ja rakennedokumenttia. Tehty jartiedosto. JOstain syystä kuvat vähän pykii. En osaa korjata.
