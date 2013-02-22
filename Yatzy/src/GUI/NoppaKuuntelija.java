@@ -21,6 +21,7 @@ import yatzy.Yatzy;
  * silmälukua vastaava nopan kuva käyttöliittymässä näytettäväksi.
  *
  */
+
 public class NoppaKuuntelija implements ActionListener {
 
     private List<Noppa> nopat;

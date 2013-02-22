@@ -9,7 +9,6 @@ import java.util.List;
 
 /**
  *
- * @author lini
  * Pelaajaluokkaa käytetään tässä vaiheessa lähinnä Lopussa esitettävän pelituloksen
  * vuoksi. Eli pelaaja-oliosta saadaan pelaajan nimi ja kokonaispisteet jotka näytetään
  * pelin päätyttyä pop-up ikkunassa. Jatkokehityksessä tätä luokkaa käytettäisiin

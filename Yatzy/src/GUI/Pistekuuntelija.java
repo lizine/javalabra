@@ -17,8 +17,7 @@ import yatzy.Yatzy;
 import yatzy.Pisteidenlasku;
 
 /**
- *
- * @author lini Tämä luokka kuuntelee käyttöliittymässä tulostaulukossa olevia
+ * Tämä luokka kuuntelee käyttöliittymässä tulostaulukossa olevia
  * JButtoneita Kun käyttäjä on valinnut kohdan johon haluaa lisätä pisteentä ja
  * klikannut ko. JButtonia Kutsutaan Pisteidenlaskuluokan oikeaa metodia ja
  * haetaan sen tulokset, eli ko. kohdan kokonaisepisteet jTextfieldiin

@@ -8,10 +8,9 @@ import GUI.Kayttoliittyma;
 
 
 /**
- *
- * @author lini
- * Main -luokka, tehtävänä on vain eriyttää ohjelman käynnistäminen omaan luokkaansa.
- * Mainmetodi kutsuu käyttöliittymäluokan run()- metodia.
+ * 
+ * Main luokan tehtävä on vain käynnistää käyttöliittmä ja koko ohjelman suoritus
+ * 
  */
 public class Main {
     

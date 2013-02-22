@@ -8,7 +8,7 @@ import java.util.Random;
 
 /**
  *
- * @author lini Noppa luokan ominaisuuksina nopan silmäluku, tila (onko lukittu
+ * Noppa luokan ominaisuuksina nopan silmäluku, tila (onko lukittu
  * vai ei) sekä nopan heittäminen metodilla heitaNoppaa(), lisäksi luokassa on
  * getterit ja setterit silmäluvuille ja lukitustilalle.
  */
@@ -21,13 +21,17 @@ public class Noppa {
         /**
          * Asetetaan oletuksena nopan silmäluvuksi 1. Pelin alkutilanteessa siis
          * jokaisen nopan silmäluku on 1.
-         *
+         * @param lukittu
+         * @param silmaluku
          */
         silmaluku = 1;
         lukittu = false;
 
     }
-
+/**
+ * 
+ * @param lukittu 
+ */
     public Noppa(boolean lukittu) {
         this.lukittu = lukittu;
     }
@@ -60,6 +64,7 @@ public class Noppa {
      *
      * onkoLukittu kertoo onko noppa lukittuna vai ei. Palauttaa muuttujan
      * lukittu.
+     * @param lukittu
      */
     public boolean onkoLukittu() {
         return lukittu;
@@ -68,6 +73,7 @@ public class Noppa {
     /**
      * Metodin tarkoitus on lukita noppa jos käyttäjä niin valitsee. Tällöin
      * noppaa ei voi enää heittää.
+     * @param lukittu
      */
     public void lukitseNoppa() {
 

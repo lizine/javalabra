@@ -28,14 +28,16 @@ import yatzy.Pelaaja;
 import yatzy.Yatzy;
 import yatzy.Pisteidenlasku;
 
+
+
 /**
+ * Käyttöliittymäluokassa luodaan yatzyn "pelipöytä". Jframe,
+ * johon sijoitetaan viisi nopan kuvalla varustettua JButtonia vierekkäin, sekä
+ * niiden alle JButton, josta noppia voi pyöräyttää.
  *
- * @author lini * Käyttöliittymäluokassa luodaan yatzyn "pelipöytä". Jframe,
- * johon sijoitetaan viisi nopan kuvalla varustettua JButtonia vierekkäin, sekä niiden alle
- * JButton, josta noppia voi pyöräyttää.
- *
- * Näiden alle luodaan pisteidenkirjaustaulukko.Jbuttoneineen ja Jtextfieldeineen,
- * sekä yhteispisteosio johon lasketaan käyttäjän yhteispisteet.
+ * Näiden alle luodaan pisteidenkirjaustaulukko.Jbuttoneineen ja
+ * Jtextfieldeineen, sekä yhteispisteosio johon lasketaan käyttäjän
+ * yhteispisteet.
  *
  */
 public class Kayttoliittyma implements Runnable {
@@ -54,11 +56,11 @@ public class Kayttoliittyma implements Runnable {
     private JTextField neloset;
     private JTextField vitoset;
     private JTextField kutoset;
-     private JTextField yatzyt;
+    private JTextField yatzyt;
     private JTextField TXTpisteet;
     private String pelaajaNimi;
     private Pelaaja pelaaja;
- //noppien kuvien esittely
+    //noppien kuvien esittely
     Icon noppa1aimg = new ImageIcon("noppa1a.jpg");
     Icon noppa2aimg = new ImageIcon("noppa2a.jpg");
     Icon noppa3aimg = new ImageIcon("noppa3a.jpg");
@@ -72,6 +74,7 @@ public class Kayttoliittyma implements Runnable {
     Icon noppa4img = new ImageIcon("noppa4.jpg");
     Icon noppa5img = new ImageIcon("noppa5.jpg");
     Icon noppa6img = new ImageIcon("noppa6.jpg");
+
     
     public Kayttoliittyma() {
         yatzy = new Yatzy();
@@ -81,7 +84,7 @@ public class Kayttoliittyma implements Runnable {
 
     @Override
     public void run() {
-        pelaajaNimi = JOptionPane.showInputDialog(null,"Nimesi");
+        pelaajaNimi = JOptionPane.showInputDialog(null, "Nimesi");
         System.out.println(pelaajaNimi);
         pelaaja.setNimi(pelaajaNimi);
         frame = new JFrame("Yatzy");
@@ -90,51 +93,49 @@ public class Kayttoliittyma implements Runnable {
         luoKomponentit(frame.getContentPane());
         frame.pack();
         frame.setVisible(true);
-        
-         
+
+
 
     }
 
-    
     /**
- *luoKomponentit metodissa luodaan neljä riviä ja yhden sarakkeen sisältävä gridi
- * komponentteja varten.
- * 
- * Sitten ensimmäiselle riville lisätään luonopat() metodilla nopat. 
- * Toiselle riville luodaan suoraan "heita noppaa" Jbutton sekä lisätään sille oma kuuntelija
- *Kolmannelle riville kutsutaan tulosTaulukko() metodia joka luo tulostaulukon
- * ja neljännelle riville kutsutaan yhteispisteet -metodia joka luo yhteispisteosion.
- */
+     * luoKomponentit metodissa luodaan neljä riviä ja yhden sarakkeen sisältävä
+     * gridi komponentteja varten.
+     *
+     * Sitten ensimmäiselle riville lisätään luonopat() metodilla nopat.
+     * Toiselle riville luodaan suoraan "heita noppaa" Jbutton sekä lisätään
+     * sille oma kuuntelija Kolmannelle riville kutsutaan tulosTaulukko()
+     * metodia joka luo tulostaulukon ja neljännelle riville kutsutaan
+     * yhteispisteet -metodia joka luo yhteispisteosion.
+     */
     private void luoKomponentit(Container container) {
-      
+
         GridLayout layout = new GridLayout(3, 1);
         container.setLayout(layout);
         container.add(luoNopat());
-       
+
         JButton heitaNoppaa = new JButton("Heitä noppaa!");
         heitaNoppaa.addActionListener(new NoppaKuuntelija(noppa1, noppa2, noppa3, noppa4, noppa5, nopat, yatzy));
         container.add(heitaNoppaa);
-       
+
         container.add(tulosTaulukko());
-        //container.add(yhteispisteet());
-        
-         
+
+
+
 
     }
 
-    
-     /**
- *luoNopat metodi luo yksirivisen ja viisisarakkeisen gridilayoutin johon joka
- * sarakkeeseen sijoitetaan yksi noppaa vastaava JButton.
- * Lisäksi jokaiselle JButtonille lisätään tässä yhteydessä lukituskuuntelija, joka
- * tarkkailee onko ko. jbutton valittu -> noppa lukittu vai ei.
- */
-    
+    /**
+     * luoNopat metodi luo yksirivisen ja viisisarakkeisen gridilayoutin johon
+     * joka sarakkeeseen sijoitetaan yksi noppaa vastaava JButton. Lisäksi
+     * jokaiselle JButtonille lisätään tässä yhteydessä lukituskuuntelija, joka
+     * tarkkailee onko ko. jbutton valittu -> noppa lukittu vai ei.
+     */
     private JPanel luoNopat() {
         JPanel noppaPaneli = new JPanel(new GridLayout(1, 5));
 
-        
-        
+
+
         noppa1 = new JButton(noppa1aimg);
         noppaPaneli.add(noppa1);
 
@@ -161,33 +162,15 @@ public class Kayttoliittyma implements Runnable {
         return noppaPaneli;
     }
 
-    
-        /**
- *yhteispisteet -metodissa luodaan yksirivinen ja kaksisarakkeinen gridlayoutti
- * johon rakentuu yhteispisteet osio JLaberlista ja textfieldistä.
- */
-//      private JPanel yhteispisteet() { 
-//        JPanel yhteispisteetPanel = new JPanel(new GridLayout(1, 2));
-//
-//        JLabel pisteet = new JLabel("yhteispisteet:");
-//        TXTpisteet = new JTextField();
-//        yhteispisteetPanel.add(pisteet);
-//        yhteispisteetPanel.add(TXTpisteet);
-//        TXTpisteet.setText("pistettä");
-//
-//
-//        return yhteispisteetPanel;
-//    }
-    
-           /**
- *tulosTaulukko -metodissa luodaan kuusirivinen ja kaksisarakkeinen gridlayoutti
- * pisteidenlaskua varten.  Jokaiselle eri pistevaihtoehdolle on oma jButton jota painamalla
- * käyttäjä viestittää haluavansa lisätä noppien pisteet ko. kohtaan,
- * sekä Textfield johon pisteet lasketaan
- * 
- * Pisteidenlasku JButtoneille lisätään oma pistekuuntelija actionlistener joka
- * tutkii onko käyttäjä painanut  ko. nappia ja laskee pisteet.
- */
+    /**
+     * tulosTaulukko -metodissa luodaan kuusirivinen ja kaksisarakkeinen
+     * gridlayoutti pisteidenlaskua varten. Jokaiselle eri pistevaihtoehdolle on
+     * oma jButton jota painamalla käyttäjä viestittää haluavansa lisätä noppien
+     * pisteet ko. kohtaan, sekä Textfield johon pisteet lasketaan
+     *
+     * Pisteidenlasku JButtoneille lisätään oma pistekuuntelija actionlistener
+     * joka tutkii onko käyttäjä painanut ko. nappia ja laskee pisteet.
+     */
     private JPanel tulosTaulukko() {
         JPanel tulospaneli = new JPanel(new GridLayout(8, 2));
 
@@ -196,8 +179,8 @@ public class Kayttoliittyma implements Runnable {
         JButton BTNkolmoset = new JButton("kolmoset:");
         JButton BTNneloset = new JButton("neloset:");
         JButton BTNvitoset = new JButton("vitoset:");
-        JButton BTNkutoset =new JButton("kutoset:");
-        JButton BTNyatzyt =new JButton("yatzy:");
+        JButton BTNkutoset = new JButton("kutoset:");
+        JButton BTNyatzyt = new JButton("yatzy:");
         ykkoset = new JTextField();
         kakkoset = new JTextField();
         kolmoset = new JTextField();
@@ -205,15 +188,11 @@ public class Kayttoliittyma implements Runnable {
         vitoset = new JTextField();
         kutoset = new JTextField();
         yatzyt = new JTextField();
-        
-        
-          JLabel pisteet = new JLabel("    yhteispisteet:");
-          TXTpisteet = new JTextField();
-//        yhteispisteetPanel.add(pisteet);
-//        yhteispisteetPanel.add(TXTpisteet);
-//        TXTpisteet.setText("pistettä");
-        
-        
+
+
+        JLabel pisteet = new JLabel("    yhteispisteet:");
+        TXTpisteet = new JTextField();
+
 
 
         tulospaneli.add(BTNykkoset);
@@ -228,28 +207,23 @@ public class Kayttoliittyma implements Runnable {
         tulospaneli.add(vitoset);
         tulospaneli.add(BTNkutoset);
         tulospaneli.add(kutoset);
-       // tulospaneli.add(BTNyatzyt);
-        //tulospaneli.add(yatzyt);
-        
+
+
         tulospaneli.add(pisteet);
         tulospaneli.add(TXTpisteet);
 
-        Pistekuuntelija pistekuuntelija = new Pistekuuntelija(yatzy, nopat, ykkoset,kakkoset,kolmoset,neloset,vitoset,kutoset, BTNykkoset, BTNkakkoset, BTNkolmoset, BTNneloset, BTNvitoset, BTNkutoset, TXTpisteet,pelaaja);
+        Pistekuuntelija pistekuuntelija = new Pistekuuntelija(yatzy, nopat, ykkoset, kakkoset, kolmoset, neloset, vitoset, kutoset, BTNykkoset, BTNkakkoset, BTNkolmoset, BTNneloset, BTNvitoset, BTNkutoset, TXTpisteet, pelaaja);
         BTNykkoset.addActionListener(pistekuuntelija);
         BTNkakkoset.addActionListener(pistekuuntelija);
         BTNkolmoset.addActionListener(pistekuuntelija);
         BTNneloset.addActionListener(pistekuuntelija);
         BTNvitoset.addActionListener(pistekuuntelija);
         BTNkutoset.addActionListener(pistekuuntelija);
-       
+
         return tulospaneli;
     }
-
-  
 
     public JFrame getFrame() {
         return frame;
     }
-     
-     
 }

@@ -15,10 +15,9 @@ import yatzy.Noppa;
 
 /**
  *
- * @author lini
- *
  * Tämä luokka kuuntelee mitä noppia käyttöliittymästä on valittu lukittaviksi,
  * sekä asettaa niiden lukitusarvon TRUEksi ja vaihtaa nopan kuvan oikeaan.
+ * 
  */
 public class Lukituskuuntelija implements ActionListener {
 

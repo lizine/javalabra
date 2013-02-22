@@ -8,10 +8,9 @@ import GUI.*;
 import java.util.*;
 
 /**
- *
- * @author lini Yatzy-luokka sisältää pelin logiikan. Täällä käsitellään noppien
+ *Yatzy-luokka sisältää pelin logiikan. Täällä käsitellään noppien
  * heittäminen ja lukitus, sekä välitetään nopat ArrayListinä
- * Pisteidenlaskuluokalle pisteidenlaskua varten.
+ * Pisteidenlaskuluokalle pisteidenlaskua varten. 
  */
 public class Yatzy {
 
