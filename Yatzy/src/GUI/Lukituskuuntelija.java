@@ -75,26 +75,26 @@ public class Lukituskuuntelija implements ActionListener {
         if (yatzy.getKierros() != 0) {
 
             if (source.equals(noppa1)) {
-                System.out.println("noppa1");
+              //  System.out.println("noppa1");
                 nopat.get(0).lukitseNoppa();
                 vaihdaNoppienKuvat();
 
 
             } else if (source.equals(noppa2)) {
-                System.out.println("noppa2");
+            //    System.out.println("noppa2");
                 nopat.get(1).lukitseNoppa();
                 vaihdaNoppienKuvat();
             } else if (source.equals(noppa3)) {
                 nopat.get(2).lukitseNoppa();
-                System.out.println("3");
+              //  System.out.println("3");
                 vaihdaNoppienKuvat();
             } else if (source.equals(noppa4)) {
                 nopat.get(3).lukitseNoppa();
-                System.out.println("4");
+          //      System.out.println("4");
                 vaihdaNoppienKuvat();
             } else if (source.equals(noppa5)) {
                 nopat.get(4).lukitseNoppa();
-                System.out.println("5");
+              //  System.out.println("5");
                 vaihdaNoppienKuvat();
             }
         }

@@ -91,8 +91,8 @@ public class NoppaKuuntelija implements ActionListener {
         if (yatzy.getKierros() < 3) {
 
             yatzy.pelaaKierros();
-            System.out.println("Kuuntelija kuunteli!");
-            System.out.println(yatzy.getKierros() + " kierros");
+          // System.out.println("Kuuntelija kuunteli!");
+           // System.out.println(yatzy.getKierros() + " kierros");
 
             vaihdaNoppakuvat();
 

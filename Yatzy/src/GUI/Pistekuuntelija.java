@@ -81,21 +81,21 @@ public class Pistekuuntelija implements ActionListener {
      */
     @Override
     public void actionPerformed(ActionEvent e) {
-        System.out.println("pisteet:");
-        System.out.println( yatzy.getKierros());
+      //  System.out.println("pisteet:");
+       // System.out.println( yatzy.getKierros());
         if (yatzy.getKierros()!=0){
 
         Object source = e.getSource();
 
         if (source.equals(BTNykkoset)) {
-            System.out.println("ykköset");
+           // System.out.println("ykköset");
             pisteidenlasku.ykkoset();
             int tulos = (int) pisteidenlasku.getTuloslista().get("ykkoset");
             String pisteet1 = tulos + " pistettä";
 
-            System.out.println(pisteet1);
+            //System.out.println(pisteet1);
             yhteispisteet = yhteispisteet + tulos;
-            System.out.println(yhteispisteet + " yhteensä");
+           // System.out.println(yhteispisteet + " yhteensä");
             this.TXTpisteet.setText(yhteispisteet + " pistettä");
 
             this.ykkoset.setText(pisteet1);
@@ -103,35 +103,35 @@ public class Pistekuuntelija implements ActionListener {
 
 
         } else if (source.equals(BTNkakkoset)) {
-            System.out.println("kakkoset");
+        //    System.out.println("kakkoset");
             pisteidenlasku.kakkoset();
             int tulos = (int) pisteidenlasku.getTuloslista().get("kakkoset");
             String pisteet2 = tulos + " pistettä";
-            System.out.println(pisteet2);
+          //  System.out.println(pisteet2);
             this.kakkoset.setText(pisteet2);
             yhteispisteet = yhteispisteet + tulos;
             this.TXTpisteet.setText(yhteispisteet + " pistettä");
             BTNkakkoset.setEnabled(false);
 
         } else if (source.equals(BTNkolmoset)) {
-            System.out.println("kolmoset");
+         //   System.out.println("kolmoset");
             pisteidenlasku.kolmoset();
             int tulos = (int) pisteidenlasku.getTuloslista().get("kolmoset");
             String pisteet3 = tulos + " pistettä";
             yhteispisteet = yhteispisteet + tulos;
-            System.out.println(pisteet3);
+          //  System.out.println(pisteet3);
             this.kolmoset.setText(pisteet3);
             this.TXTpisteet.setText(yhteispisteet + " pistettä");
 
             BTNkolmoset.setEnabled(false);
 
         } else if (source.equals(BTNneloset)) {
-            System.out.println("neloset");
+         //   System.out.println("neloset");
             pisteidenlasku.neloset();
             int tulos = (int) pisteidenlasku.getTuloslista().get("neloset");
             String pisteet4 = tulos + " pistettä";
             yhteispisteet = yhteispisteet + tulos;
-            System.out.println(pisteet4);
+          //  System.out.println(pisteet4);
             this.neloset.setText(pisteet4);
             this.TXTpisteet.setText(yhteispisteet + " pistettä");
             BTNneloset.setEnabled(false);
@@ -156,8 +156,8 @@ public class Pistekuuntelija implements ActionListener {
         }
 
 
-        System.out.println("kierros pelattu");
-        System.out.println(pisteidenlasku.getTuloslista());
+    //    System.out.println("kierros pelattu");
+     //   System.out.println(pisteidenlasku.getTuloslista());
         yatzy.nollaaKierros();
         yatzy.nollaaNopat(); 
 
@@ -174,7 +174,7 @@ public class Pistekuuntelija implements ActionListener {
         else{
            
              JOptionPane.showMessageDialog(null, "Heitä ensin noppaa!");
-             System.out.println(pelaaja.getNimi());
+           //  System.out.println(pelaaja.getNimi());
         }
        
 
