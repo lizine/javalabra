@@ -17,7 +17,7 @@ import static org.junit.Assert.*;
  * @author lini
  */
 public class PelaajaTest {
-    
+    private Pelaaja pelaaja;
     public PelaajaTest() {
     }
     
@@ -31,6 +31,7 @@ public class PelaajaTest {
     
     @Before
     public void setUp() {
+          pelaaja = new Pelaaja();
     }
     
     @After
@@ -42,7 +43,20 @@ public class PelaajaTest {
      */
     @Test
     public void testGetNimi() {
+        
+        pelaaja.setNimi("taneli");
        
+        String nimi = "taneli";
+        String tulos = pelaaja.getNimi();
+        assertEquals(nimi, tulos);
+    }
+    
+     public void testSetNimi() {
+       pelaaja.setNimi("teppo");
+       
+        String nimi = "teppo";
+        String tulos = pelaaja.getNimi();
+        assertEquals(nimi, tulos);
     }
 
     /**

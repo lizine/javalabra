@@ -16,41 +16,40 @@ import static org.junit.Assert.*;
  * @author lini
  */
 public class NoppaTest {
-    
+
+    private Noppa noppa;
+
     public NoppaTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
+        noppa = new Noppa();
     }
-    
+
     @After
     public void tearDown() {
     }
 
     /**
-     * Test of heitaNoppaa method, of class Noppa.
+     * Testataan, että nopan silmäluku on väliltä 1-6.
      */
     @Test
     public void testHeitaNoppaa() {
         System.out.println("heitaNoppaa");
-        Noppa noppa = new Noppa();
+        // 
         noppa.heitaNoppaa();
         int silmaluku = noppa.getSilmaluku();
-         assertTrue(silmaluku>0 && silmaluku<7);
-                
-                      
-            
-        
-       // fail("Silmäluku ei ole 1-6");
+        assertTrue(silmaluku > 0 && silmaluku < 7);
+
     }
 
     /**
@@ -59,42 +58,52 @@ public class NoppaTest {
     @Test
     public void testGetSilmalukuAlussa() {
         System.out.println("getSilmaluku");
-        Noppa noppa = new Noppa();
-        
+        //  Noppa noppa = new Noppa();
+
         int expResult = 1;
         int result = noppa.getSilmaluku();
         assertEquals(expResult, result);
-        
-        
+
+
     }
-    
-     @Test
+
+    /**
+     * Testataan ovatko kaikki nopat aluksi lukitsemattomia, eli käyttäjä
+     * pystyy "heittämään" niitä.
+     */
+    @Test
     public void testGetLukittuOnFalseAlussa() {
         System.out.println("onkoLukittu");
-        Noppa noppa = new Noppa();
-        
+       // Noppa noppa = new Noppa();
+
         boolean expResult = false;
         boolean result = noppa.onkoLukittu();
         assertEquals(expResult, result);
-        
-      
+
+
     }
-    
-    
 
     /**
-     * Test of onkoLukittu method, of class Noppa.
+     *  onkoLukittu -metodi testaa muuttuuko nopan lukittu arvo trueksi kun kutsutaan
+     * lukitseNoppa() -metodia.
      */
     @Test
     public void testLukittuukoNoppa() {
         System.out.println("Lukittuuko noppa lukittaessa.");
-        Noppa noppa = new Noppa();
+       // Noppa noppa = new Noppa();
         noppa.lukitseNoppa();
-        boolean expResult = true;
+        boolean lukitettu = true;
         boolean result = noppa.onkoLukittu();
-        assertEquals(expResult, result);
-        
-    }
+        assertEquals(lukitettu, result);
 
-  
+    }
+    
+    @Test
+    public void testvapautaNoppa(){
+        noppa.vapautaNoppa();
+        boolean lukittu = false;
+        boolean tulos = noppa.onkoLukittu();
+        assertEquals(lukittu, tulos);
+    
+    }
 }

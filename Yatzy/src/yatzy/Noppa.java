@@ -4,18 +4,20 @@
  */
 package yatzy;
 
+import java.util.Random;
+
 /**
  *
- * @author lini
- * Noppa luokan ominaisuuksina nopan silmäluku, tila (onko lukittu vai ei) sekä nopan heittäminen metodilla
- * heitaNoppaa(), lisäksi luokassa on getterit ja setterit silmäluvuille ja lukitustilalle.
+ * @author lini Noppa luokan ominaisuuksina nopan silmäluku, tila (onko lukittu
+ * vai ei) sekä nopan heittäminen metodilla heitaNoppaa(), lisäksi luokassa on
+ * getterit ja setterit silmäluvuille ja lukitustilalle.
  */
 public class Noppa {
 
     private int silmaluku;
     private boolean lukittu;
 
-    public Noppa() { 
+    public Noppa() {
         /**
          * Asetetaan oletuksena nopan silmäluvuksi 1. Pelin alkutilanteessa siis
          * jokaisen nopan silmäluku on 1.
@@ -31,12 +33,15 @@ public class Noppa {
     }
 
     /**
-     * Metodissa arvotaan silmäluvulle uusi arvo väliltä 1-6 Math-luokan
-     * random() metodilla
+     * Metodissa arvotaan nopan silmäluku muuttujalle uusi arvo väliltä 1-6.
      */
     public void heitaNoppaa() {
+        Random nopanheittaja = new Random();
         if (lukittu == false) {
-            this.silmaluku = (int) (Math.random() * 6) + 1;
+
+
+            this.silmaluku = nopanheittaja.nextInt(6) + 1;
+            // this.silmaluku = (int) (Math.random() * 6) + 1;
         }
 
 
@@ -47,32 +52,31 @@ public class Noppa {
         return this.silmaluku;
     }
 
-    
     public void setSilmaluku(int numero) {
-       this.silmaluku=numero;
+        this.silmaluku = numero;
     }
+
     /**
-     * 
-     * onkoLukittu kertoo onko noppa lukittuna vai ei.
-     * Palauttaa muuttujan lukittu.
+     *
+     * onkoLukittu kertoo onko noppa lukittuna vai ei. Palauttaa muuttujan
+     * lukittu.
      */
     public boolean onkoLukittu() {
         return lukittu;
     }
 
     /**
-     * Metodin tarkoitus on lukita noppa jos käyttäjä niin valitsee. Tällöin noppaa ei voi enää heittää.
+     * Metodin tarkoitus on lukita noppa jos käyttäjä niin valitsee. Tällöin
+     * noppaa ei voi enää heittää.
      */
-    
     public void lukitseNoppa() {
-     
-            this.lukittu = true;
-      
-       
+
+        this.lukittu = true;
+
+
     }
-    
-     public void vapautaNoppa(){
-        this.lukittu=false;
+
+    public void vapautaNoppa() {
+        this.lukittu = false;
     }
-     
 }

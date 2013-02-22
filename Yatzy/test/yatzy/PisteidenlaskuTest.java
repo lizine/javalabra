@@ -19,7 +19,9 @@ import static org.junit.Assert.*;
  * @author lini
  */
 public class PisteidenlaskuTest {
-    
+     Map<String, Integer> tulostaulu;
+      Yatzy yatzy;
+     
     public PisteidenlaskuTest() {
     }
     
@@ -33,6 +35,8 @@ public class PisteidenlaskuTest {
     
     @Before
     public void setUp() {
+         tulostaulu = new HashMap<>();
+         yatzy = new Yatzy();
     }
     
     @After
@@ -43,7 +47,7 @@ public class PisteidenlaskuTest {
      @Test
     public void testTulostauluunAvaimenLisays() {
         System.out.println("tulostauluun lisäys");
-         Map<String, Integer> tulostaulu = new HashMap<>();
+        
          tulostaulu.put("ykköset", 1);
          assertTrue(tulostaulu.containsKey("ykköset"));
         
@@ -51,7 +55,6 @@ public class PisteidenlaskuTest {
       @Test
     public void testTulostauluunArvonLisays() {
        
-         Map<String, Integer> tulostaulu = new HashMap<>();
          tulostaulu.put("ykköset", 1);
         int expResult = 1;
         int result = tulostaulu.get("ykköset");
@@ -66,7 +69,7 @@ public class PisteidenlaskuTest {
      */
     @Test
     public void testYkkoset() {
-        Yatzy yatzy = new Yatzy();
+     
         
         List <Noppa>noppalista = yatzy.getNoppaLista();
         
@@ -90,7 +93,7 @@ public class PisteidenlaskuTest {
      */
     @Test
     public void testKakkoset() {
-        Yatzy yatzy = new Yatzy();
+   
         
         List <Noppa>noppalista = yatzy.getNoppaLista();
         
@@ -109,7 +112,7 @@ public class PisteidenlaskuTest {
     }
      @Test
     public void testKolmoset() {
-        Yatzy yatzy = new Yatzy();
+    
         
         List <Noppa>noppalista = yatzy.getNoppaLista();
         
@@ -128,7 +131,7 @@ public class PisteidenlaskuTest {
     }
        @Test
     public void testNeloset() {
-        Yatzy yatzy = new Yatzy();
+   
         
         List <Noppa>noppalista = yatzy.getNoppaLista();
         
@@ -147,7 +150,7 @@ public class PisteidenlaskuTest {
     }
        @Test
     public void testVitoset() {
-        Yatzy yatzy = new Yatzy();
+    
         
         List <Noppa>noppalista = yatzy.getNoppaLista();
         
@@ -166,7 +169,7 @@ public class PisteidenlaskuTest {
     }
          @Test
     public void testKutoset() {
-        Yatzy yatzy = new Yatzy();
+    
         
         List <Noppa>noppalista = yatzy.getNoppaLista();
         
