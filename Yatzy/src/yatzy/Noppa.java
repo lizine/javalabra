@@ -82,6 +82,10 @@ public class Noppa {
 
     }
 
+    /**
+     * Metodin tarkoitus on vapauttaa noppa, eli muuttaa sen lukittu -muuttujan tila
+     * falseksi. 
+     */
     public void vapautaNoppa() {
         this.lukittu = false;
     }
