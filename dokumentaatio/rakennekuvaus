@@ -1,6 +1,12 @@
 Rakennekuvaus:
 
+GUI-pakkauksesta löytyy käyttöliittymän toimintaan liittyvät luokat
+yatzy-pakkauksesta löytyy pelilogiikkaan liittyvät luokat.
+
+HUOM - YRITIN poistaa copypastea noppien kuvien vaihtamiseen liittyen,  yritin luoda luokan Noppavaihtaja, joka olisi vastannut tästä, mutta yrityksistä huolimatta en loppujen lopuksi jostain syystä saanut koodia toimimaan näin. JOten rumaa copypastea jäi tuon metodin verran.
+
 Pelilogiikka on pyritty toteuttamaan yatzy -luokkaan.
+
 
 Siellä esimerkiksi tapahtuu noppien "heittäminen" ja noppaolioiden tallentaminen arrayListiin, sekä noppien kierrosmuuttujan  nollaaminen.
 Myös koko noppalistan lukitustilan nollaamiselle on Yatzy-luokassa oma metodinsa. Tämä metodi tulee tarpeen kun 3 kierrosta, eli yksi vuoro on pelattu.
