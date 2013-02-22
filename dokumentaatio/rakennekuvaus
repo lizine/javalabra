@@ -1,0 +1,27 @@
+Rakennekuvaus:
+
+Pelilogiikka on pyritty toteuttamaan yatzy -luokkaan.
+
+Siellä esimerkiksi tapahtuu noppien "heittäminen" ja noppaolioiden tallentaminen arrayListiin, sekä noppien kierrosmuuttujan  nollaaminen.
+Myös koko noppalistan lukitustilan nollaamiselle on Yatzy-luokassa oma metodinsa. Tämä metodi tulee tarpeen kun 3 kierrosta, eli yksi vuoro on pelattu.
+
+noppalista välitetään täältä esimerkiksi pisteidenlaskuluokalle.
+
+Noppa-luokasta luodaan 5 noppaoliota joilla jokaisella on silmäluku ja lukitustila. Noppaluokassa on myös näihin liittyvät metodit, eli silmäluvun randomisti valitseva metodi, lukituksen poisto, lukittaminen, lukitustilan palauttava metodi, sekä getterit ja setterit silmäluvulle.
+
+Pelaaja-luokka jäi hieman tyngäksi. Tässä vaiheessa sitä käytetään lähinnä säilömään pelaajan nimi, joka kysytään pelin alussa ja näytetään lopussa pop-upissa yhteispisteiden kanssa. Laajennettaessa käyttäisin pelaaja-luokkaa high score -pisteiden tallentamisen apuna.
+
+Pisteidenlasku-luokka
+Oliomuuttujat: HashMap tulostaulu johon kerätään koko pelin tuloksia
+		Arraylist nopat, joka saadaan Yatzy-luokalta.
+
+Pisteidenlaskulle välitetään ArrayListina noppalista Yatzylta.
+Luokka vastaa noppien silmälukujen vertaamisesta haluttuun tulokseen. Esimerkiksi metodi ykkoset- käy noppalistan läpi ja jos listassa olevan noppaolion silmäluku on 1, lisätään tämä summa-muuttujaan ja näin saadaan ykköset -rivin pistemäärä. Esimerkiksi jos noppalistassa on 3 noppaa joiden silmäluku on yksi, palauttaisi ykkoset-metodi luvun 3.
+
+Tämän lisäksi tulos talletetaan Hashmappiin, avaimena laskettavapistetyyppi Stringinä, eli 
+esim "ykkoset" ja sen parina ykkoset metodin summa.
+
+Lisäksi ohjelmassa on Käyttöliittymäluokka sekä kolme eri Actionlistenerluokkaa
+Lukituskuuntelija, Noppakuuntelija ja Pistekuuntelija.
+
+

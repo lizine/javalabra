@@ -1,0 +1,13 @@
+Testidokumentti
+
+Testasin käyttöliittymän toimintaa käsin.
+Testaamisen avuksi tulostin aina konsoliin esimerkiksi nopan silmäluvun ja lukitustilan, jotta näin vastaako ko. nopan kohdalla näytettävä ikoni nopan tilaa, eli näytetäänkö
+oikea kuva, oikealla silmäluvulla ja punaisena jos noppa on lukittua tai harmaana jos noppaa ei ole lukittu.
+
+Lisäksi esimerkiksi alussa kysytään pelaajan nimeä JOPtionpanella. Kutsuin nimen kirjoittamisen pelaaja.setnimi() -metodin kutsumisen jälkeen pelaaja.getNimi() -metodia ja tulostin tuloksen konsoliin, jotta näen heti asettuuko nimi oikein.
+
+Pelaajaluokan käyttö jäi hieman tyngäksi, sen tarkoitus olisi laajennetussa versiossa toimia high score -listan tallettamisen apuna.
+
+Myös noppien listausta testasin käsin, tulostin konsoliin joka kierroksen jälkeen noppien silmäluvut sisältävän listan ja tarkastin, että noppien silmäluvut ja listan arvot vastaavat toisiaan. Tästä tein myös JUnit-testejä.
+
+
